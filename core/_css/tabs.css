@@ -21,6 +21,11 @@
 	border: 1px solid #000;
 	background: #DDD;
 	text-decoration: none;
+	/* TL TR BR BL */
+	-webkit-border-radius: 5px 5px 0 0;
+	-moz-border-radius: 5px 5px 0 0;
+	border-radius: 5px 5px 0 0;
+	
 }
 
 .tab-strip a:hover {
