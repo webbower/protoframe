@@ -1,0 +1,52 @@
+/* ################ TABS ################ */
+
+.tabs {
+	position: relative;
+}
+
+.tab-strip {
+	margin: 0;
+}
+
+.tab-strip li {
+	display: inline-block;
+	margin: 0;
+	position: relative;
+	z-index: 10;
+}
+
+.tab-strip a {
+	display: inline-block;
+	padding: 3px 10px;
+	border: 1px solid #000;
+	background: #DDD;
+	text-decoration: none;
+}
+
+.tab-strip a:hover {
+	background: #FFF;
+}
+
+.tab-strip a.active {
+	border-bottom-color: #FFF;
+	background: #FFF;
+}
+
+.tab-panel {
+	border: 1px solid #000;
+	position: relative;
+	top: -1px;
+	clear: both;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 0 10px;
+}
+
+.js .tab-panel {
+	display: none;
+}
+
+.tab-panel.active {
+	display: block;
+}

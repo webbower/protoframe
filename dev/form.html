@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+	<meta charset="utf-8" />
+	<title>Wireframe CSS</title>
+	<link rel="stylesheet" href="/protoframe/core/_css/reset.css" />
+	<link rel="stylesheet" href="/protoframe/core/_css/typography.css" />
+	<link rel="stylesheet" href="/protoframe/core/_css/wireframe.php?layoutUnit=px&amp;fontUnit=pe&amp;colSize=40&amp;colCount=24&amp;gutter=10&amp;vertSpacing=20" />
+	<link rel="stylesheet" href="/protoframe/core/_css/widgets.css" />
+	<link rel="stylesheet" href="/protoframe/core/_css/utilities.css" />
+</head>
+<body class="serif">
+	<div class="grid after-2 clearfix">
+		<header class="clearfix before-1 after-1">
+			<h1 class="col-14">My Site Name</h1>
+			
+			<ul class="nav inline">
+				<li><a href="#">Home</a></li>
+				<li><a href="#">Services</a></li>
+				<li><a href="#">Portfolio</a></li>
+				<li><a href="#">About Us</a></li>
+				<li><a href="#">Contact Us</a></li>
+			</ul>
+		</header>
+		<article role="main" class="main col-24 after-2">
+			<h1>Register</h1>
+			
+			<form action="" method="post">
+			    <fieldset class="col-11 append-2">
+			        <div>
+			            <label for="fname">First Name:</label>
+			            <input type="text" name="fname" id="fname" />
+			        </div>
+					<div>
+					    <label for="lname">Last Name:</label>
+					    <input type="text" name="lname" id="lname" />
+					</div>
+					<div>
+					    <label for="email">Email:</label>
+					    <input type="email" name="email" id="email" />
+					</div>
+					<div>
+					    <label for="phone">Phone:</label>
+					    <input type="tel" name="phone" id="phone" />
+					</div>
+					<div>
+					    <label for="website">Website:</label>
+					    <input type="url" name="website" id="website" />
+					</div>
+				</fieldset>
+				<fieldset class="col-11 last">
+					<div>
+					    <label for="address1">Address:</label>
+					    <input type="text" name="address1" id="address1" />
+					    <input type="text" name="address2" />
+					</div>
+					<div class="col-6">
+					    <label for="city">City:</label>
+					    <input type="text" name="city" id="city" />
+					</div>
+					<div class="col-2">
+					    <label for="state">State:</label>
+					    <input type="text" name="state" id="state" maxlength="2" />
+					</div>
+					<div class="col-3 last">
+					    <label for="zip">Zip Code:</label>
+					    <input type="text" name="zip" id="zip" pattern="\d{5}(?:-\d{4})?" />
+					</div>
+			    </fieldset>
+			    <fieldset class="col-24 before-1">
+			        <button type="submit">Submit</button>
+			    </fieldset>
+			</form>
+		</article>
+		<footer class="col-24 after-1">
+			<small>&copy; Copyright 2011 Webbower</small>
+		</footer>
+	</div>
+</body>
+</html>
