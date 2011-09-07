@@ -114,12 +114,6 @@ button {width: auto; overflow: visible;}
 /* prevent BG image flicker upon hover */
 .ie6 html {filter: expression(document.execCommand("BackgroundImageCache", false, true));}
 
-/* let's clear some floats */
-.clearfix:before, .clearfix:after { content: "\0020"; display: block; height: 0; overflow: hidden; }  
-.clearfix:after { clear: both; }  
-.clearfix { zoom: 1; }  
-
-
 
 /* Ok, this is where the fun starts.
 -------------------------------------------------------------------------------*/

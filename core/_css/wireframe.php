@@ -53,10 +53,10 @@
 .last, .col-<?php echo $colCount; ?> { margin-right: 0; }
 <?php endif ?>
 
-<?php echo implode("\n", $prepend); ?>
+<?php // echo implode("\n", $prepend); ?>
 
 
-<?php echo implode("\n", $append); ?>
+<?php // echo implode("\n", $append); ?>
 
 
 <?php echo implode("\n", $before); ?>
@@ -64,6 +64,16 @@
 
 <?php echo implode("\n", $after); ?>
 
+.row {
+	clear: both;
+}
+
+.spacer {}
+
+.spacer:after {
+	content: '.';
+	visibility: hidden;
+}
 
 /* ################ WIREFRAME ################ */
 
@@ -158,8 +168,6 @@
 	padding: 10px 20px;
 	-webkit-box-shadow: 3px 3px 0 #000;
 	-moz-box-shadow: 3px 3px 0 #000;
-	-ms-box-shadow: 3px 3px 0 #000;
-	-o-box-shadow: 3px 3px 0 #000;
 	box-shadow: 3px 3px 0 #000;
 	margin-bottom: 1em;
 }
