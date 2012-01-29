@@ -55,7 +55,7 @@
 				.triggerHandler('show.tabs', hash.length > 1 ? hash : $root.find('.tab-strip a').first().attr('href'))
 			;
 
-			$(el).widget('Tabs', this);
+			$root.widget('Tabs', this);
 			
 			return self;
 		},
