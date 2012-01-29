@@ -9,8 +9,8 @@
 	$(function() {
 		$(document.documentElement).toggleClass('no-js js');
 
-		// PF.Tabs.init();
-		// 
+		$('.tabs').tabs();
+
 		// PF.Slideshow.init();
 		// 
 		// PF.Dialog.init();
