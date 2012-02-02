@@ -1,0 +1,51 @@
+/* ################ TABLE VIEW ################ */
+
+.table-view {
+	border-top: 1px solid #CCC;
+	margin: 0;
+	padding: 0;
+}
+
+.table-view > * {
+	overflow: hidden;
+	min-height: 3em;
+	border: 1px solid #CCC;
+	border-top: 0;
+	border-right: 0;
+	margin: 0;
+	padding: 0;
+}
+
+.table-view .mod-10,
+.table-view .mod-20,
+.table-view .mod-30,
+.table-view .mod-40,
+.table-view .mod-50,
+.table-view .mod-60,
+.table-view .mod-70,
+.table-view .mod-80,
+.table-view .mod-90,
+.table-view .mod-100 {
+	float: left;
+	margin: 0;
+	padding: 0;
+	vertical-align: top;
+	min-height: 3em;
+	text-align: center;
+	border-right: 1px solid #CCC;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.table-view .mod-10 { width: 10%; }
+.table-view .mod-20 { width: 20%; }
+.table-view .mod-30 { width: 30%; }
+.table-view .mod-40 { width: 40%; }
+.table-view .mod-50 { width: 50%; }
+.table-view .mod-60 { width: 60%; }
+.table-view .mod-70 { width: 70%; }
+.table-view .mod-80 { width: 80%; }
+.table-view .mod-90 { width: 90%; }
+.table-view .mod-100 { width: 100%; }
+
