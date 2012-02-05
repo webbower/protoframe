@@ -26,5 +26,12 @@
 			}
 		}
 	});
+	
+	$(function() {
+		$(document.body)
+			// Disabled links should not trigger
+			.on('click', 'a.pf-state-disabled', function(ev) { ev.preventDefault(); })
+		;
+	});
 
 })(jQuery, this, this.document);

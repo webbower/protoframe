@@ -1,5 +1,14 @@
 /* ################ UTILITY CLASSES ################ */
 
+.pf-state-disabled,
+.pf-state-disabled:hover,
+.pf-state-disabled:active,
+.pf-state-disabled:focus {
+	color: #AAA !important;
+	text-decoration: none !important;
+	cursor: default;
+}
+
 .left-align {
 	text-align: left !important;
 }
