@@ -49,3 +49,13 @@
 .table-view .mod-90 { width: 90%; }
 .table-view .mod-100 { width: 100%; }
 
+.table-view .selected {
+	background: #E8E8E8;
+}
+
+.table-view input[type=text] {
+	border: 0;
+	background: transparent;
+	margin: 0;
+	padding: 0;
+}
