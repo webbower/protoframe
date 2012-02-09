@@ -21,7 +21,10 @@
 	<script src="../js/init.js"></script>
 	<script>
 	    $(function() {
-			$('.table-view').tableview();
+			$('.table-view').tableview({
+				editTmpl: $('#TableEditRow').html(),
+				viewTmpl: $('#TableViewRow').html()
+			});
 		});
 	</script>
 </head>
@@ -89,6 +92,12 @@
 	</ul>
 	<div class="table-view" data-row-element="div">
 		<div>
+			<span class="mod-10"><input type="checkbox" name="rowCheck" value="1" /></span>
+			<span class="mod-70 left-align editable">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
+			<span class="mod-10"><a href="#" class="delete">X</a></span>
+			<span class="mod-10"><a href="#" class="edit">Edit</a></span>
+		</div>
+		<div>
 			<span class="mod-10"><input type="checkbox" name="rowCheck" value="1" checked="checked" /></span>
 			<span class="mod-70 left-align editable">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
 			<span class="mod-10"><a href="#" class="delete">X</a></span>
@@ -101,43 +110,37 @@
 			<span class="mod-10"><a href="#" class="edit">Edit</a></span>
 		</div>
 		<div>
+			<span class="mod-10"><input type="checkbox" name="rowCheck" value="1" /></span>
+			<span class="mod-70 left-align editable">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
+			<span class="mod-10"><a href="#" class="delete">X</a></span>
+			<span class="mod-10"><a href="#" class="edit">Edit</a></span>
+		</div>
+		<div>
+			<span class="mod-10"><input type="checkbox" name="rowCheck" value="1" /></span>
+			<span class="mod-70 left-align editable">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
+			<span class="mod-10"><a href="#" class="delete">X</a></span>
+			<span class="mod-10"><a href="#" class="edit">Edit</a></span>
+		</div>
+		<div>
+			<span class="mod-10"><input type="checkbox" name="rowCheck" value="1" /></span>
+			<span class="mod-70 left-align editable">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
+			<span class="mod-10"><a href="#" class="delete">X</a></span>
+			<span class="mod-10"><a href="#" class="edit">Edit</a></span>
+		</div>
+		<div>
+			<span class="mod-10"><input type="checkbox" name="rowCheck" value="1" /></span>
+			<span class="mod-70 left-align editable">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
+			<span class="mod-10"><a href="#" class="delete">X</a></span>
+			<span class="mod-10"><a href="#" class="edit">Edit</a></span>
+		</div>
+		<div>
+			<span class="mod-10"><input type="checkbox" name="rowCheck" value="1" /></span>
+			<span class="mod-70 left-align editable">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
+			<span class="mod-10"><a href="#" class="delete">X</a></span>
+			<span class="mod-10"><a href="#" class="edit">Edit</a></span>
+		</div>
+		<div>
 			<span class="mod-10"><input type="checkbox" name="rowCheck" value="1" checked="checked" /></span>
-			<span class="mod-70 left-align editable">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
-			<span class="mod-10"><a href="#" class="delete">X</a></span>
-			<span class="mod-10"><a href="#" class="edit">Edit</a></span>
-		</div>
-		<div>
-			<span class="mod-10"><input type="checkbox" name="rowCheck" value="1" /></span>
-			<span class="mod-70 left-align editable">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
-			<span class="mod-10"><a href="#" class="delete">X</a></span>
-			<span class="mod-10"><a href="#" class="edit">Edit</a></span>
-		</div>
-		<div>
-			<span class="mod-10"><input type="checkbox" name="rowCheck" value="1" /></span>
-			<span class="mod-70 left-align editable">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
-			<span class="mod-10"><a href="#" class="delete">X</a></span>
-			<span class="mod-10"><a href="#" class="edit">Edit</a></span>
-		</div>
-		<div>
-			<span class="mod-10"><input type="checkbox" name="rowCheck" value="1" /></span>
-			<span class="mod-70 left-align editable">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
-			<span class="mod-10"><a href="#" class="delete">X</a></span>
-			<span class="mod-10"><a href="#" class="edit">Edit</a></span>
-		</div>
-		<div>
-			<span class="mod-10"><input type="checkbox" name="rowCheck" value="1" /></span>
-			<span class="mod-70 left-align editable">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
-			<span class="mod-10"><a href="#" class="delete">X</a></span>
-			<span class="mod-10"><a href="#" class="edit">Edit</a></span>
-		</div>
-		<div>
-			<span class="mod-10"><input type="checkbox" name="rowCheck" value="1" /></span>
-			<span class="mod-70 left-align editable">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
-			<span class="mod-10"><a href="#" class="delete">X</a></span>
-			<span class="mod-10"><a href="#" class="edit">Edit</a></span>
-		</div>
-		<div>
-			<span class="mod-10"><input type="checkbox" name="rowCheck" value="1" /></span>
 			<span class="mod-70 left-align editable">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
 			<span class="mod-10"><a href="#" class="delete">X</a></span>
 			<span class="mod-10"><a href="#" class="edit">Edit</a></span>
@@ -150,13 +153,21 @@
 		</div>
 	</div>
 	
-	<div id="TableRow" class="pf-template">
+	<script type="text/html" id="TableViewRow">
 		<li>
 			<span class="mod-10"><input type="checkbox" name="rowCheck" value="{{id}}" /></span>
 			<span class="mod-70 left-align editable">{{value}}</span>
 			<span class="mod-10"><a href="#" class="delete">X</a></span>
 			<span class="mod-10"><a href="#" class="edit">Edit</a></span>
 		</li>
-	</div>
+	</script>
+	<script type="text/html" id="TableEditRow">
+		<li>
+			<span class="mod-10"><input type="checkbox" name="rowCheck" value="{{id}}" disabled="disabled" /></span>
+			<span class="mod-70 left-align editable"><input type="text" value=""></span>
+			<span class="mod-10"><a href="#" class="delete pf-state-disabled">X</a></span>
+			<span class="mod-10"><a href="#" class="save">Save</a></span>
+		</li>
+	</script>
 </body>
 </html>

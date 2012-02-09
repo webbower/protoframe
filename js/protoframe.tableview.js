@@ -125,7 +125,7 @@
 		},
 		
 		deleteRow: function(row) {
-			console.log("Deleting ", row);  // TODO: Remove for Production
+			// console.log("Deleting ", row);  // TODO: Remove for Production
 			var
 				$row = $(row)
 			;
@@ -135,7 +135,7 @@
 		},
 		
 		editRow: function(row) {
-			console.log("Editing ", row);  // TODO: Remove for Production
+			// console.log("Editing ", row);  // TODO: Remove for Production
 			var
 				$row = $(row),
 				o = this.options,
@@ -151,7 +151,7 @@
 		},
 		
 		saveRow: function(row) {
-			console.log("Saving ", row);  // TODO: Remove for Production
+			// console.log("Saving ", row);  // TODO: Remove for Production
 			var
 				$row = $(row),
 				o = this.options,
@@ -167,7 +167,13 @@
 		},
 		
 		addRow: function() {
-			console.log("Adding Row");  // TODO: Remove for Production
+			//  ("Adding Row");  // TODO: Remove for Production
+			// var
+			// 	self = this,
+			// 	o = self.options
+			// ;
+			// 
+			// self.element[o.insertNewRow === 'top' ? 'prepend' : 'append'](PF.tmpl(this.options.editTmpl, {}));
 		},
 		
 		toggleRow: function(row, state) {
