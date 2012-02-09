@@ -3,7 +3,21 @@
 	window.PF = window.PF || {};
 
 	$.extend(window.PF, {
-		doc: $(document)
+		doc: $(document),
+		
+		tmpl: function(template, data) {
+			var
+				re
+			;
+			for(var d in data) {
+				re = new RexExp('\\{\\{' + d + '\\}\\}', 'g');
+				
+				template = template.replace(re, data[d]);
+			}
+			
+			// Clear out all the unreplaced placeholders
+			return template.replace(/\{\{\w+\}\}/g, '');
+		}
 	});
 	
 	$.fn.extend({

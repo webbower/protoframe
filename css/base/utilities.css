@@ -1,10 +1,5 @@
 /* ################ UTILITY CLASSES ################ */
 
-.pf-template {
-	display: none;
-	visibility: hidden;
-}
-
 .pf-state-disabled,
 .pf-state-disabled:hover,
 .pf-state-disabled:active,
