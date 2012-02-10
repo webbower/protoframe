@@ -1,0 +1,32 @@
+img, object {
+	max-width: 100%;
+}
+
+/* ################ CONTENT LAYOUT ################ */
+
+.entry-list {
+	border: 1px solid #CCC;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	
+}
+
+.entry {
+	border-top: 1px solid #CCC;
+	padding: 0 10px;
+}
+
+.entry:first-child {
+	border: 0;
+}
+
+.entry-left-img img {
+	float: left;
+}
+.entry-right-img img {
+	float: right;
+}
+
+/* ========== COMMENT LIST ========== */
+

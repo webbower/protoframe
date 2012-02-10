@@ -1,0 +1,46 @@
+/* ################ UTILITY CLASSES ################ */
+
+.pf-state-disabled,
+.pf-state-disabled:hover,
+.pf-state-disabled:active,
+.pf-state-disabled:focus {
+	color: #AAA !important;
+	text-decoration: none !important;
+	cursor: default;
+}
+
+.left-align {
+	text-align: left !important;
+}
+
+.center-align {
+	text-align: center !important;
+}
+
+.right-align {
+	text-align: right !important;
+}
+
+/* ========== MORELINK ========== */
+.more {}
+	
+.more:after {
+	content: '\00A0>';
+}
+
+/* ========== MICRO CLEARFIX ========== */
+/* For modern browsers */
+.cf:before,
+.cf:after {
+    content:"";
+    display:table;
+}
+
+.cf:after {
+    clear:both;
+}
+
+/* For IE 6/7 (trigger hasLayout) */
+.cf {
+    zoom:1;
+}

@@ -1,180 +1,170 @@
 /* ################ SLIDESHOW ################ */
-
+/* line 3, ../../scss/modules/slideshow.scss */
 .slideshow {
-	background: #000;
-	position: relative;
-	height: 480px;
-	overflow: hidden;
-}
+  background: #000;
+  position: relative;
+  height: 480px;
+  overflow: hidden; }
 
+/* line 10, ../../scss/modules/slideshow.scss */
 .slides {
-	margin: 0;
-}
+  margin: 0; }
 
+/* line 14, ../../scss/modules/slideshow.scss */
 .no-js .slides li {
-	float: left;
-	margin: 0 10px 10px 0;
-	list-style: none;
-}
+  float: left;
+  margin: 0 10px 10px 0;
+  list-style: none; }
 
+/* line 20, ../../scss/modules/slideshow.scss */
 .pf-slideshow .slides li {
-	list-style: none;
-	position: absolute;
-	left: 0;
-	right: 0;
-	display: none;
-}
+  list-style: none;
+  position: absolute;
+  left: 0;
+  right: 0;
+  display: none; }
 
+/* line 28, ../../scss/modules/slideshow.scss */
 .pf-slideshow .slides li:first-child {
-	display: block;
-}
+  display: block; }
 
+/* line 32, ../../scss/modules/slideshow.scss */
 .pf-slideshow .slides img {
-	display: block;
-	margin: 0 auto;
-}
+  display: block;
+  margin: 0 auto; }
 
+/* line 37, ../../scss/modules/slideshow.scss */
 .nav-strip {
-	margin: 0;
-	position: absolute;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	height: 80px;
-	background: rgba(0,0,0,0.5);
-	text-align: center;
-}
+  margin: 0;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 80px;
+  background: rgba(0, 0, 0, 0.5);
+  text-align: center; }
 
+/* line 48, ../../scss/modules/slideshow.scss */
 .nav-strip li {
-	list-style: none;
-	display: inline;
-}
+  list-style: none;
+  display: inline; }
 
-.nav-strip a {}
-
-.index-strip {}
-
+/* line 57, ../../scss/modules/slideshow.scss */
 .index-strip a {
-	font-size: 48px;
-	line-height: 80px;
-	color: #CCC;
-	text-decoration: none;
-	margin: 0 5px;
-}
+  font-size: 48px;
+  line-height: 80px;
+  color: #CCC;
+  text-decoration: none;
+  margin: 0 5px; }
 
+/* line 66, ../../scss/modules/slideshow.scss */
 .index-strip a:hover,
 .index-strip a.active {
-	color: #999;
-}
+  color: #999; }
 
-.thumbnail-strip {}
-
+/* line 72, ../../scss/modules/slideshow.scss */
 .thumbnail-strip a {
-	overflow: hidden;
-	display: inline-block;
-	width: 80px;
-	height: 60px;
-	margin: 10px 5px;
-/*	vertical-align: middle;*/
-	padding: 1px;
-}
+  overflow: hidden;
+  display: inline-block;
+  width: 80px;
+  height: 60px;
+  margin: 10px 5px;
+  /*	vertical-align: middle;*/
+  padding: 1px; }
 
+/* line 83, ../../scss/modules/slideshow.scss */
 .thumbnail-strip a:hover,
 .thumbnail-strip a.active {
-	border: 1px solid #DDD;
-	padding: 0;
-}
+  border: 1px solid #DDD;
+  padding: 0; }
 
-.thumbnail-strip img {
-}
-
+/* line 92, ../../scss/modules/slideshow.scss */
 .prev,
 .next {
-	position: absolute;
-	display: block;
-	overflow: hidden;
-	text-indent: -999em;
-	height: 30%;
-	width: 80px;
-	background: #CCC;
-	top: 35%;
-}
+  position: absolute;
+  display: block;
+  overflow: hidden;
+  text-indent: -999em;
+  height: 30%;
+  width: 80px;
+  background: #CCC;
+  top: 35%; }
 
+/* line 103, ../../scss/modules/slideshow.scss */
 .prev {
-	left: 0;
-	-webkit-border-radius: 0 20px 20px 0;
-	-moz-border-radius: 0 20px 20px 0;
-	border-radius: 0 20px 20px 0;
-}
+  left: 0;
+  -webkit-border-radius: 0 20px 20px 0;
+  -moz-border-radius: 0 20px 20px 0;
+  border-radius: 0 20px 20px 0; }
 
+/* line 110, ../../scss/modules/slideshow.scss */
 .next {
-	right: 0;
-	-webkit-border-radius: 20px 0 0 20px;
-	-moz-border-radius: 20px 0 0 20px;
-	border-radius: 20px 0 0 20px;
-}
+  right: 0;
+  -webkit-border-radius: 20px 0 0 20px;
+  -moz-border-radius: 20px 0 0 20px;
+  border-radius: 20px 0 0 20px; }
 
+/* line 118, ../../scss/modules/slideshow.scss */
 .prev:after,
 .next:after {
-	content: '';
-	display: block;
-	position: absolute;
-	width: 0;
-	height: 0;
-	top: 45px;
-	border-top: 30px solid transparent;
-	border-bottom: 30px solid transparent;
-}
+  content: '';
+  display: block;
+  position: absolute;
+  width: 0;
+  height: 0;
+  top: 45px;
+  border-top: 30px solid transparent;
+  border-bottom: 30px solid transparent; }
 
+/* line 129, ../../scss/modules/slideshow.scss */
 .prev:after {
-	border-right: 30px solid #666;
-	left: 20px;
-}
+  border-right: 30px solid #666;
+  left: 20px; }
 
+/* line 134, ../../scss/modules/slideshow.scss */
 .next:after {
-	border-left: 30px solid #666;
-	right: 20px;
-}
+  border-left: 30px solid #666;
+  right: 20px; }
 
+/* line 140, ../../scss/modules/slideshow.scss */
 .prev:hover,
 .next:hover {
-	background: #333;
-}
+  background: #333; }
 
+/* line 144, ../../scss/modules/slideshow.scss */
 .prev:hover:after {
-	border-right-color: #CCC;
-}
+  border-right-color: #CCC; }
 
+/* line 148, ../../scss/modules/slideshow.scss */
 .next:hover:after {
-	border-left-color: #CCC;
-}
+  border-left-color: #CCC; }
 
+/* line 153, ../../scss/modules/slideshow.scss */
 .prev.disabled,
 .next.disabled {
-	background: #666 !important;
-}
+  background: #666 !important; }
 
+/* line 157, ../../scss/modules/slideshow.scss */
 .prev.disabled:after {
-	border-right-color: #333 !important;
-}
+  border-right-color: #333 !important; }
 
+/* line 161, ../../scss/modules/slideshow.scss */
 .next.disabled:after {
-	border-left-color: #333 !important;
-}
+  border-left-color: #333 !important; }
 
+/* line 167, ../../scss/modules/slideshow.scss */
 .pf-slideshow .prev,
 .pf-slideshow .next,
 .pf-slideshow .nav-strip {
-	/*opacity: 0;
-	-webkit-transition: opacity .25s ease-in-out;
-	-moz-transition: opacity .25s ease-in-out;
-	-ms-transition: opacity .25s ease-in-out;
-	-o-transition: opacity .25s ease-in-out;
-	transition: opacity .25s ease-in-out;*/
-}
+  /*opacity: 0;
+  -webkit-transition: opacity .25s ease-in-out;
+  -moz-transition: opacity .25s ease-in-out;
+  -ms-transition: opacity .25s ease-in-out;
+  -o-transition: opacity .25s ease-in-out;
+  transition: opacity .25s ease-in-out;*/ }
 
+/* line 178, ../../scss/modules/slideshow.scss */
 .pf-slideshow:hover .prev,
 .pf-slideshow:hover .next,
 .pf-slideshow:hover .nav-strip {
-	opacity: 1;
-}
+  opacity: 1; }
