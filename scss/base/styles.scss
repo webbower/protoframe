@@ -15,10 +15,10 @@ img, object {
 .entry {
 	border-top: 1px solid #CCC;
 	padding: 0 10px;
-}
 
-.entry:first-child {
-	border: 0;
+	&:first-child {
+		border: 0;
+	}
 }
 
 .entry-left-img img {

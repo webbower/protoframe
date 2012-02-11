@@ -21,23 +21,20 @@
   text-align: right !important; }
 
 /* ========== MORELINK ========== */
-/* line 27, ../../scss/base/utilities.scss */
+/* line 26, ../../scss/base/utilities.scss */
 .more:after {
   content: '\00A0>'; }
 
 /* ========== MICRO CLEARFIX ========== */
 /* For modern browsers */
-/* line 34, ../../scss/base/utilities.scss */
-.cf:before,
-.cf:after {
-  content: "";
-  display: table; }
-
-/* line 39, ../../scss/base/utilities.scss */
-.cf:after {
-  clear: both; }
-
-/* For IE 6/7 (trigger hasLayout) */
-/* line 44, ../../scss/base/utilities.scss */
+/* line 33, ../../scss/base/utilities.scss */
 .cf {
+  /* For IE 6/7 (trigger hasLayout) */
   zoom: 1; }
+  /* line 35, ../../scss/base/utilities.scss */
+  .cf:before, .cf:after {
+    content: "";
+    display: table; }
+  /* line 40, ../../scss/base/utilities.scss */
+  .cf:after {
+    clear: both; }

@@ -14,10 +14,9 @@ img, object {
 .entry {
   border-top: 1px solid #CCC;
   padding: 0 10px; }
-
-/* line 20, ../../scss/base/styles.scss */
-.entry:first-child {
-  border: 0; }
+  /* line 19, ../../scss/base/styles.scss */
+  .entry:first-child {
+    border: 0; }
 
 /* line 24, ../../scss/base/styles.scss */
 .entry-left-img img {

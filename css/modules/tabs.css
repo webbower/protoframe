@@ -1,55 +1,52 @@
 /* ################ TABS ################ */
-/* line 3, ../../scss/modules/tabs.scss */
+/* line 4, ../../scss/modules/tabs.scss */
 .tabs {
   position: relative; }
 
-/* line 7, ../../scss/modules/tabs.scss */
+/* line 8, ../../scss/modules/tabs.scss */
 .tab-strip {
   margin: 0; }
+  /* line 11, ../../scss/modules/tabs.scss */
+  .tab-strip li {
+    display: inline-block;
+    margin: 0;
+    position: relative;
+    z-index: 10; }
+  /* line 18, ../../scss/modules/tabs.scss */
+  .tab-strip a {
+    display: inline-block;
+    padding: 3px 10px;
+    border: 1px solid #000;
+    background: #DDD;
+    text-decoration: none;
+    -moz-border-radius: 5px 5px 0 0;
+    -webkit-border-radius: 5px 5px 0 0;
+    -o-border-radius: 5px 5px 0 0;
+    -ms-border-radius: 5px 5px 0 0;
+    -khtml-border-radius: 5px 5px 0 0;
+    border-radius: 5px 5px 0 0; }
+    /* line 26, ../../scss/modules/tabs.scss */
+    .tab-strip a:hover {
+      background: #FFF; }
+    /* line 30, ../../scss/modules/tabs.scss */
+    .tab-strip a.active {
+      border-bottom-color: #FFF;
+      background: #FFF; }
 
-/* line 11, ../../scss/modules/tabs.scss */
-.tab-strip li {
-  display: inline-block;
-  margin: 0;
-  position: relative;
-  z-index: 10; }
-
-/* line 18, ../../scss/modules/tabs.scss */
-.tab-strip a {
-  display: inline-block;
-  padding: 3px 10px;
-  border: 1px solid #000;
-  background: #DDD;
-  text-decoration: none;
-  /* TL TR BR BL */
-  -webkit-border-radius: 5px 5px 0 0;
-  -moz-border-radius: 5px 5px 0 0;
-  border-radius: 5px 5px 0 0; }
-
-/* line 31, ../../scss/modules/tabs.scss */
-.tab-strip a:hover {
-  background: #FFF; }
-
-/* line 35, ../../scss/modules/tabs.scss */
-.tab-strip a.active {
-  border-bottom-color: #FFF;
-  background: #FFF; }
-
-/* line 40, ../../scss/modules/tabs.scss */
+/* line 37, ../../scss/modules/tabs.scss */
 .tab-panel {
   border: 1px solid #000;
   position: relative;
   top: -1px;
   clear: both;
-  -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
   box-sizing: border-box;
   padding: 0 10px; }
-
-/* line 51, ../../scss/modules/tabs.scss */
-.js .tab-panel {
-  display: none; }
-
-/* line 55, ../../scss/modules/tabs.scss */
-.tab-panel.active {
-  display: block; }
+  /* line 45, ../../scss/modules/tabs.scss */
+  .js .tab-panel {
+    display: none; }
+  /* line 49, ../../scss/modules/tabs.scss */
+  .tab-panel.active {
+    display: block; }

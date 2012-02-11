@@ -16,16 +16,15 @@
   background: #FFF;
   left: 50%;
   min-height: 200px; }
-
-/* line 21, ../../scss/modules/dialog.scss */
-#dialog .close {
-  position: absolute;
-  top: 8px;
-  right: 6px;
-  font-family: sans-serif;
-  text-decoration: none;
-  color: #999;
-  width: 18px;
-  height: 18px;
-  font-size: 18px;
-  line-height: 18px; }
+  /* line 20, ../../scss/modules/dialog.scss */
+  #dialog .close {
+    position: absolute;
+    top: 8px;
+    right: 6px;
+    font-family: sans-serif;
+    text-decoration: none;
+    color: #999;
+    width: 18px;
+    height: 18px;
+    font-size: 18px;
+    line-height: 18px; }
