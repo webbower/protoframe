@@ -1,95 +1,99 @@
 ; (function($) {
-
-	PF.Tabs = function(el, opts) {
-		return PF.Tabs.prototype.init(el, opts); 
-	};
-
-	$.extend(PF.Tabs, {
-		defaults: {
-			
+	
+var _parent = $.pf.widget;
+	
+$.widget('pf.tabs', _parent, {
+	// Default options
+	options: {
+		events: {
+			'.tab-strip a click': function(ev) {
+				ev.preventDefault();
+				var
+					$el = $(this)
+				;
+				// this.tabs('show', $(el).attr('href'));
+				$el.closest('.pf-tabs').tabs('show', $el.attr('href'));
+				console.log("Tab clicked");  // TODO: Remove for Production
+			}
 		}
-	});
+	},
 
-	$.extend(PF.Tabs.prototype, {
-		/*
-			API:
-			data-tabs-content-src: URL to AJAX load tab content (.tab-panel)
-			data-tabs-show: Activate a tab on a tab set #id[idx] (*)
-		*/
-		constructor: PF.Tabs,
-		element: null,
-		_activeTab: null,
-		_activePanel: null,
-		init: function(el, opts) {
-			var
-				self = this,
-				$root = $(el),
-				hash = location.hash
-			;
-			
-			this.element = $root;
-			
-			$root
-				// Use EOA for the tabs to handle the showing method
-				.on('show.tabs', function(ev, id) {
-					self.showTab(id);
-				})
-				
-				.on('destroy.tabs', function(ev) {
-					self.destroy();
-				})
-
-				// Hook up click event to tabs
-				.on('click.tabs', '.tab-strip a', function(ev) {
-					ev.preventDefault();
-						
-					var
-						$tab = $(this)
-					;
-						
-					// If the tab clicked on isn't the currently active one, show the tab
-					if(this !== self._activeTab[0])
-						$root.triggerHandler('show.tabs', $tab.attr('href'));
-				})
-				// Show the default tab
-				.triggerHandler('show.tabs', hash.length > 1 ? hash : $root.find('.tab-strip a').first().attr('href'))
-			;
-
-			$root.widget('Tabs', this);
-			
-			return self;
-		},
-			
-		showTab: function(id) {
-			var
-				self = this,
-				$root = self.element
-			;
-			
-			if(self._activeTab && self._activeTab[0])
-				self._activeTab.add(self._activePanel).removeClass('active');
-			
-			self._activeTab = $root.find('.tab-strip a[href="'+id+'"]');
-			self._activePanel = $root.find(id);
-
-			self._activeTab.add(self._activePanel).addClass('active');
-		},
+	_create: function() {
+		_parent.prototype._create.call(this);
+		this._activePanel = null;
+		this._activeTab   = null;
 		
-		destroy: function() {
-			this.element.off('.tabs');
-			this._activePanel = null;
-			this._activeTab = null;
+		var
+			self = this,
+			$root = self.element,
+			hash = location.hash
+		;
+		
+		$root
+			.addClass('pf-tabs')
 			
-			this.element.widget('Tabs', 'destroy');
-		}
-	});
+			.find('.tab-strip').addClass('pf-tab-strip')
+			.end().find('.tab-panel').addClass('pf-tab-panel')
+		;
 
-	$.fn.extend({
-		tabs: function(opts) {
-			return this.each(function() {
-				PF.Tabs(this, opts);
-			});
+		if(hash && hash.length > 1)
+			this.show(hash);
+		else
+			this.show(0);
+	},
+
+	_init: function() {},
+
+	_indexToId: function(index) {
+		return this.element.find('.tab-strip a').eq(index).attr('href');
+	},
+
+	// Override option setting method
+	_setOption: function(option, value) {
+		_parent.prototype._setOption.apply(this, arguments);
+	},
+
+	show: function(id) {
+		// if(this !== self._activeTab[0])
+		// 	$root.triggerHandler('show.tabs', $tab.attr('href'));
+		var
+			self = this,
+			$root = self.element
+		;
+
+		if(!isNaN(+id)) {
+			id = self._indexToId(+id);
 		}
-	});
+
+		if(self._activeTab && self._activeTab[0]) {
+			self._activeTab.removeClass('pf-state-active');
+			self._activePanel.removeClass('pf-state-active');
+		}
+
+		self._activeTab = $root.find('.tab-strip a[href="'+id+'"]');
+		self._activePanel = $root.find(id);
+
+		self._activeTab.addClass('pf-state-active');
+		self._activePanel.addClass('pf-state-active');
+
+	},
+
+	// Remove and cleanup after the widget. Unbind events, serialize data, remove HTML components
+	destroy: function() {
+		var
+			self = this,
+			$root = self.element
+		;
+		$root
+			.removeClass('pf-tabs')
+			
+			.find('.tab-strip').removeClass('pf-tab-strip')
+			.end().find('.tab-panel').removeClass('pf-tab-panel')
+		;
+		
+		// Call parent method
+		_parent.prototype.destroy.apply(this, arguments);
+	}
+});
 
 })(jQuery);

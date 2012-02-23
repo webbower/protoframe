@@ -47,6 +47,7 @@
   /* line 45, ../../scss/modules/tabs.scss */
   .js .tab-panel {
     display: none; }
-  /* line 49, ../../scss/modules/tabs.scss */
-  .tab-panel.active {
-    display: block; }
+
+/* line 50, ../../scss/modules/tabs.scss */
+.js .pf-state-active {
+  display: block; }
