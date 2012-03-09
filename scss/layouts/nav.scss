@@ -1,0 +1,194 @@
+/////////////////////////////////////////
+// BASELINE NAV STYLES
+/////////////////////////////////////////
+nav {
+	ul {
+		margin: 0;
+		padding: 0;
+		list-style-type: none;
+	}
+	
+	li {
+		margin: 0;
+		padding: 0;
+	}
+	
+	a {
+		text-decoration: none;
+	}
+	
+	.current {
+		> a {
+			cursor: default;
+		}
+	}
+}
+
+/////////////////////////////////////////
+// INLINE NAV
+/////////////////////////////////////////
+.inline-nav {
+	ul {
+		margin: 1em 0;
+		overflow: auto;
+	}
+	
+	li {
+		float: left;
+		margin-right: 10px;
+		padding-right: 10px;
+		border-right: 1px solid #999;
+		
+		&:last-child {
+			margin-right: 0;
+			padding-right: 0;
+			border-right: 0;
+		}
+	}
+	
+	a {
+		line-height: 18px;
+		font-size: 18px;
+		text-decoration: none;
+		float: left;
+		color: #06F;
+
+		&:hover,
+		&:focus {
+			text-decoration: underline;
+			color: #C00;
+		}
+	}
+	
+	.current {
+		> a {
+			text-decoration: underline;
+			color: #C00;
+		}
+	}
+}
+
+/////////////////////////////////////////
+// INLINE BLOCK NAV
+// 
+// @extends .inline-nav
+/////////////////////////////////////////
+.inline-block-nav {
+	ul {
+		border: 1px solid #999;
+		margin: 0;
+	}
+	
+	li {
+		margin-right: 0;
+		padding-right: 0;
+		
+		&:last-child {
+			border-right: 1px solid #999;
+		}
+	}
+	
+	a {
+		padding: 10px 30px;
+		
+		&:hover,
+		&:focus {
+			background: #F5F5F5;
+			text-decoration: none;
+		}
+	}
+	
+	.current {
+		> a {
+			background: #F5F5F5;
+			text-decoration: none;
+		}
+	}
+}
+
+/////////////////////////////////////////
+// STACKED NAV
+//
+// @requires .col-*
+/////////////////////////////////////////
+.stacked-nav {
+	padding: 1.5em 0;
+	
+	ul {
+	}
+	
+	li {
+		margin-bottom: 0.5em;
+		
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+	
+	a {
+		font-size: 16px;
+		
+		&:hover,
+		&:focus {
+			text-decoration: underline;
+		}
+	}
+	
+	.current {
+		> a {
+			color: #69F;
+			
+			&:hover,
+			&:focus {
+				text-decoration: none;
+			}
+		}
+	}
+}
+
+/////////////////////////////////////////
+// STACKED BLOCK NAV
+// 
+// @extends .stacked-nav
+/////////////////////////////////////////
+.stacked-block-nav {
+	ul {
+		border: 1px solid #999;
+		border-top: 0;
+	}
+	
+	li {
+		border-top: 1px solid #999;
+		margin-bottom: 0;
+	}
+	
+	a {
+		display: block;
+		padding: 0.5em;
+		
+		&:hover,
+		&:focus {
+			background: #F5F5F5;
+			text-decoration: none;
+		}
+	}
+	
+	.current {
+		> a {
+			background: #F5F5F5;
+		}
+	}
+	
+	// For wireframe classed, don't double up the borders on the nav
+	&.wf {
+		ul {
+			border: 0;
+		}
+		
+		li {
+			&:first-child {
+				border-top: 0;
+			}
+		}
+	}
+}
