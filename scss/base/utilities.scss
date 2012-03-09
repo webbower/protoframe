@@ -21,6 +21,26 @@
 	text-align: right !important;
 }
 
+.clear {
+	clear: both;
+}
+
+/* ################ WIREFRAME ################ */
+
+.wf {
+	border: 1px solid #999;
+	
+	+ .wf {
+		border-top: 0;
+	}
+}
+
+.mod {
+	padding-bottom: 20px;
+	margin-bottom: 20px;
+	border-bottom: 1px solid #999;
+}
+
 /* ========== MORELINK ========== */
 .more {
 	&:after {

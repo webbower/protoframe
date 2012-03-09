@@ -1,4 +1,11 @@
+@import 'compass/css3';
+
+* {
+	@include box-sizing(border-box);
+}
+
 @import 'base/reset.css';
+@import 'base/wireframe.css';
 @import 'base/styles.css';
 @import 'base/typography.css';
 @import 'base/forms.css';
