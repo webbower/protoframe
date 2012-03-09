@@ -27,7 +27,7 @@
 			background: #FFF;
 		}
 
-		&.active {
+		&.pf-state-active {
 			border-bottom-color: #FFF;
 			background: #FFF;
 		}
@@ -47,6 +47,6 @@
 	}
 
 }
-.js .pf-state-active {
+.js .pf-tab-panel.pf-state-active {
 	display: block;
 }

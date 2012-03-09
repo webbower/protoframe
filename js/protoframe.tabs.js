@@ -6,14 +6,11 @@ $.widget('pf.tabs', _parent, {
 	// Default options
 	options: {
 		events: {
-			'.tab-strip a click': function(ev) {
+			'.tab-strip a click': function(ev, el) {
 				ev.preventDefault();
-				var
-					$el = $(this)
-				;
-				// this.tabs('show', $(el).attr('href'));
-				$el.closest('.pf-tabs').tabs('show', $el.attr('href'));
-				console.log("Tab clicked");  // TODO: Remove for Production
+				this.show($(el).attr('href'));
+				// $el.closest('.pf-tabs').tabs('show', $el.attr('href'));
+				// console.log(this, ev, el, "Tab clicked");  // TODO: Remove for Production
 			}
 		}
 	},
@@ -89,6 +86,7 @@ $.widget('pf.tabs', _parent, {
 			
 			.find('.tab-strip').removeClass('pf-tab-strip')
 			.end().find('.tab-panel').removeClass('pf-tab-panel')
+			.end().find('.pf-state-active').removeClass('pf-state-active')
 		;
 		
 		// Call parent method
