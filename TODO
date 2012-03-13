@@ -1,0 +1,66 @@
+1.0:
+	NAVIGATION:
+	- Inline
+	- Inline Block
+	- Stacked
+	- Stacked Block
+	- Stacked Nested
+	
+	LAYOUTS:
+	- One Column
+	- Two Column - Side Nav
+	- Two Column - Top Nav
+	- Three Column
+	
+	WIDGETS:
+	- Tabs (ui)
+	- Dialog (ui)
+	- Autocomplete (ui)
+	- Datepicker (ui)
+	- Tableview (Static)
+	- Slideshow
+	- Media Grid
+	- Tag Cloud
+	
+	CSS UTILITIES:
+	- Clearfix
+	- Visually Hidden
+	- Inline List
+	- Divider List (inline list with border dividers)
+	- Buttons (ui)
+	- Expand/Collapse
+	- Wireframe (creates outline)
+	- Mod/Media class (a la OOCSS)
+	
+	MISC:
+	- Declarative Widget Events
+	- Baseline Typography, Form, Link, and Table styles
+	- Form Validation
+
+2.0:
+	NAVIGATION:
+	- Inline Dropdown
+	- Stacked Accordion
+	
+	LAYOUTS:
+	- Custom Grid
+	
+	WIDGETS:
+	- Tabs (rewritten)?
+	- Tableview (Editable)
+	- Sortable Table
+	
+	CSS UTILITIES:
+	
+	MISC:
+	- State Tracking (Logged In/Logged Out)
+	- Command Routing
+	- AJAX Datasources (Fixtures)
+	- Fixture Generator Service?
+	- Social Links/Icons
+	- JS Templating
+	- Inline Editable widgets (Tableview/DataTable)
+	
+FAR FUTURE:
+- Drag and Drop
+- Persistent Changes
