@@ -28,8 +28,10 @@ nav {
 // INLINE NAV
 /////////////////////////////////////////
 .inline-nav {
+	padding-top: 1em;
+	padding-bottom: 1em;
+	
 	ul {
-		margin: 1em 0;
 		overflow: auto;
 	}
 	
@@ -153,13 +155,17 @@ nav {
 /////////////////////////////////////////
 .stacked-block-nav {
 	ul {
-		border: 1px solid #999;
-		border-top: 0;
+//		border: 1px solid #999;
+//		border-top: 0;
 	}
 	
 	li {
-		border-top: 1px solid #999;
+		border-top: 1px dotted #999;
 		margin-bottom: 0;
+		
+		&:first-child {
+			border-top: 0;
+		}
 	}
 	
 	a {

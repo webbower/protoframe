@@ -1,0 +1,10 @@
+/* ################ WIREFRAME ################ */
+
+.wf {
+	border: 1px solid #999;
+	
+	+ .wf {
+		border-top: 0;
+	}
+}
+
