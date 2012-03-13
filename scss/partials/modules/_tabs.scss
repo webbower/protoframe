@@ -21,6 +21,7 @@
 		border: 1px solid #000;
 		background: #DDD;
 		text-decoration: none;
+		font-size: 16px;
 		@include border-radius(5px 5px 0 0);
 
 		&:hover {
