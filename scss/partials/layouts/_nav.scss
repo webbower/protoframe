@@ -15,11 +15,17 @@ nav {
 	
 	a {
 		text-decoration: none;
+		
+		&:hover,
+		&:focus {
+			color: #69F;
+		}
 	}
 	
 	.current {
 		> a {
 			cursor: default;
+			color: #69F;
 		}
 	}
 }
@@ -31,41 +37,40 @@ nav {
 	padding-top: 1em;
 	padding-bottom: 1em;
 	
-	ul {
+	> ul {
 		overflow: auto;
-	}
 	
-	li {
-		float: left;
-		margin-right: 10px;
-		padding-right: 10px;
-		border-right: 1px solid #999;
+		> li {
+			float: left;
+			margin-right: 10px;
+			padding-right: 10px;
+			border-right: 1px solid #999;
 		
-		&:last-child {
-			margin-right: 0;
-			padding-right: 0;
-			border-right: 0;
-		}
-	}
+			&:last-child {
+				margin-right: 0;
+				padding-right: 0;
+				border-right: 0;
+			}
 	
-	a {
-		line-height: 18px;
-		font-size: 18px;
-		text-decoration: none;
-		float: left;
-		color: #06F;
+			> a {
+				line-height: 18px;
+				font-size: 18px;
+				text-decoration: none;
+				float: left;
 
-		&:hover,
-		&:focus {
-			text-decoration: underline;
-			color: #C00;
-		}
-	}
+				&:hover,
+				&:focus {
+					text-decoration: underline;
+//					color: #C00;
+				}
+			}
 	
-	.current {
-		> a {
-			text-decoration: underline;
-			color: #C00;
+			&.current {
+				> a {
+					text-decoration: underline;
+//					color: #C00;
+				}
+			}
 		}
 	}
 }
@@ -76,34 +81,36 @@ nav {
 // @extends .inline-nav
 /////////////////////////////////////////
 .inline-block-nav {
-	ul {
+	padding: 0;
+
+	> ul {
 		border: 1px solid #999;
 		margin: 0;
-	}
 	
-	li {
-		margin-right: 0;
-		padding-right: 0;
+		> li {
+			margin-right: 0;
+			padding-right: 0;
 		
-		&:last-child {
-			border-right: 1px solid #999;
-		}
-	}
+			&:last-child {
+				border-right: 1px solid #999;
+			}
 	
-	a {
-		padding: 10px 30px;
+			> a {
+				padding: 10px 30px;
 		
-		&:hover,
-		&:focus {
-			background: #F5F5F5;
-			text-decoration: none;
-		}
-	}
+				&:hover,
+				&:focus {
+					background: #F5F5F5;
+					text-decoration: none;
+				}
+			}
 	
-	.current {
-		> a {
-			background: #F5F5F5;
-			text-decoration: none;
+			&.current {
+				> a {
+					background: #F5F5F5;
+					text-decoration: none;
+				}
+			}
 		}
 	}
 }
@@ -116,36 +123,63 @@ nav {
 .stacked-nav {
 	padding: 1.5em 0;
 	
-	ul {
-	}
+	> ul {
 	
-	li {
-		margin-bottom: 0.5em;
+		> li {
+			margin-bottom: 0.5em;
 		
-		&:last-child {
-			margin-bottom: 0;
-		}
-	}
+			&:last-child {
+				margin-bottom: 0;
+			}
 	
-	a {
-		font-size: 16px;
+			> a {
+				font-size: 16px;
 		
-		&:hover,
-		&:focus {
-			text-decoration: underline;
-		}
-	}
-	
-	.current {
-		> a {
-			color: #69F;
+				&:hover,
+				&:focus {
+					text-decoration: underline;
+				}
+			}
 			
-			&:hover,
-			&:focus {
-				text-decoration: none;
+			&.current {
+				> a {
+					text-decoration: underline;
+				}
+			}
+			
+			> ul {
+				display: none;
+				margin-left: 15px;
+
+				> li {
+					border-top: 0;
+					margin-bottom: 0.5em;
+
+					> a {
+						font-size: 12px;
+						padding: 0;
+
+						&:hover,
+						&:focus {
+							background-color: transparent;
+							text-decoration: underline;
+						}
+					}
+
+					&.current a {
+						background-color: transparent;
+						text-decoration: underline;
+					}
+				}
+			}
+
+			&.current > ul {
+				display: block;
 			}
 		}
+		
 	}
+	
 }
 
 /////////////////////////////////////////
@@ -154,47 +188,47 @@ nav {
 // @extends .stacked-nav
 /////////////////////////////////////////
 .stacked-block-nav {
-	ul {
+	> ul {
 //		border: 1px solid #999;
 //		border-top: 0;
-	}
 	
-	li {
-		border-top: 1px dotted #999;
-		margin-bottom: 0;
+		> li {
+			border-top: 1px dotted #999;
+			margin-bottom: 0;
 		
-		&:first-child {
-			border-top: 0;
-		}
-	}
+			&:first-child {
+				border-top: 0;
+			}
 	
-	a {
-		display: block;
-		padding: 0.5em;
+			> a {
+				display: block;
+				padding: 0.5em;
 		
-		&:hover,
-		&:focus {
-			background: #F5F5F5;
-			text-decoration: none;
-		}
-	}
+				&:hover,
+				&:focus {
+					background: #F5F5F5;
+					text-decoration: none;
+				}
+			}
 	
-	.current {
-		> a {
-			background: #F5F5F5;
+			&.current {
+				> a {
+					background: #F5F5F5;
+				}
+			}
 		}
 	}
 	
 	// For wireframe classed, don't double up the borders on the nav
-	&.wf {
-		ul {
-			border: 0;
-		}
-		
-		li {
-			&:first-child {
-				border-top: 0;
-			}
-		}
-	}
+//	&.wf {
+//		ul {
+//			border: 0;
+//		}
+//		
+//		li {
+//			&:first-child {
+//				border-top: 0;
+//			}
+//		}
+//	}
 }

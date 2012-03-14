@@ -1,10 +1,10 @@
 1.0:
 	NAVIGATION:
-	- Inline
-	- Inline Block
-	- Stacked
-	- Stacked Block
-	- Stacked Nested
+	✓ Inline
+	✓ Inline Block
+	✓ Stacked
+	✓ Stacked Block
+	✓ Stacked Nested
 	
 	LAYOUTS:
 	- One Column
