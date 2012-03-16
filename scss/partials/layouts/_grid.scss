@@ -1,19 +1,51 @@
-/* ################ GRID/COLUMNS ################ */
-.grid {
+/////////////////////////////////////////
+// GRID PAGE BASE
+/////////////////////////////////////////
+.grid-page {
 	margin: 0 auto;
+	
+	> header,
+	> footer {
+		margin-left: 5px;
+		margin-right: 5px;
+		width: 100%;
+	}
 }
 
+/////////////////////////////////////////
+// BASE COLUMN CLASS
+// 
+// @requires .grid-page
+//
+// Can be used to wrap grid columns. Used to force starting on a new row
+/////////////////////////////////////////
+.grid-row {
+	clear: both;
+}
+
+/////////////////////////////////////////
+// BASE COLUMN CLASS
+// 
+// @requires .grid-page
+/////////////////////////////////////////
 .col {
 	overflow-x: hidden;
-}
-
-.col, .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .col-13, .col-14, .col-15, .col-16, .col-17, .col-18, .col-19, .col-20, .col-21, .col-22, .col-23, .col-24 {
-	margin-right: 10px;
+	margin-left: 5px;
+	margin-right: 5px;
 	float: left;
 	display: inline;
-	border: 1px solid #FFF;
 }
 
+//.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .col-13, .col-14, .col-15, .col-16, .col-17, .col-18, .col-19, .col-20, .col-21, .col-22, .col-23, .col-24 {
+//	border: 1px solid #FFF;
+//}
+
+
+/////////////////////////////////////////
+// BASE COLUMN UNITS
+// 
+// @extends .col
+/////////////////////////////////////////
 .col-1  { width:  28px; }
 .col-2  { width:  68px; }
 .col-3  { width: 108px; }
@@ -37,9 +69,7 @@
 .col-21 { width: 828px; }
 .col-22 { width: 868px; }
 .col-23 { width: 908px; }
-.col-24 { width: 948px; margin-right: 0; }
-
-.last { margin: 0; }
+.col-24 { width: 948px; }
 
 .prepend-1  { padding-left:  40px; }
 .prepend-2  { padding-left:  80px; }

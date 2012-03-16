@@ -7,10 +7,10 @@
 	✓ Stacked Nested
 	
 	LAYOUTS:
-	- One Column
-	- Two Column - Side Nav
-	- Two Column - Top Nav
-	- Three Column
+	✓ One Column
+	✓ Two Column - Side Nav
+	✓ Two Column - Top Nav
+	✓ Three Column
 	
 	WIDGETS:
 	- Tabs (ui)
