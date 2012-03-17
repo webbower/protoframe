@@ -1,11 +1,16 @@
 .mod {
-	padding-bottom: 20px;
-	margin-bottom: 20px;
-	border-bottom: 1px solid #999;
-	
-	&:last-child {
-		padding-bottom: 0;
-		margin-bottom: 0;
-		border-bottom: 0;
+	margin:10px;
+
+	.inner{
+		// background: url(skin/transparent.png) repeat left top;
 	}
+
+}
+
+.bd,
+.ft,
+.hd{
+	overflow:hidden;
+	*overflow:visible;
+	zoom:1;
 }
