@@ -1,0 +1,32 @@
+/////////////////////////////////////////
+// BASE COLUMN CLASS
+// 
+// @tag			ol, ul
+/////////////////////////////////////////
+
+.breadcrumbs {
+	margin: 0;
+	
+	li {
+		display: inline-block;
+		line-height: 24px;
+		font-size: 16px;
+		
+		&:after {
+			content: $breadcrumb-divider;
+		}
+		
+		&:last-child {
+			&:after {
+				content: none;
+			}
+		}
+	}
+	
+	a {
+		text-decoration: none;
+	}
+	
+	b {
+	}
+}
