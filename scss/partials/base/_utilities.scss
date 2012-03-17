@@ -33,8 +33,11 @@
 	}
 }
 
-/* ################ UTILITY CLASSES ################ */
-
+//////////////////////////////////////
+// WIDGET DISABLED CLASS
+//
+// @tag			*
+//////////////////////////////////////
 .pf-state-disabled,
 .pf-state-disabled:hover,
 .pf-state-disabled:active,
@@ -44,6 +47,11 @@
 	cursor: default;
 }
 
+//////////////////////////////////////
+// TYPOGRAPHICAL CLASSES
+//
+// @tag			* <any block>
+//////////////////////////////////////
 .left-align {
 	text-align: left !important;
 }
@@ -62,6 +70,8 @@
 
 //////////////////////////////////////
 // MORELINK
+//
+// @tag			a
 //////////////////////////////////////
 .more {
 	&:after {
@@ -71,6 +81,8 @@
 	
 //////////////////////////////////////
 // MICRO CLEARFIX
+//
+// @tag			*
 //////////////////////////////////////
 // For modern browsers
 .cf {
@@ -90,6 +102,8 @@
 
 //////////////////////////////////////
 // VISUALLY HIDDEN
+//
+// @tag			*
 //////////////////////////////////////
 // Hide only visually, but have it available for screenreaders: h5bp.com/v 
 .vh {
@@ -104,6 +118,9 @@
 
 	//////////////////////////////////////
 	// ...FOCUSABLE
+	//
+	// @extends		.focusable
+	// @tag			*
 	//////////////////////////////////////
 	// Extends the .vh class to allow the element to be focusable when navigated to via the keyboard: h5bp.com/p 
 	&.focusable:active,
