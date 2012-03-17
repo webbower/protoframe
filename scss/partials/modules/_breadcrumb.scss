@@ -1,16 +1,16 @@
 /////////////////////////////////////////
 // BASE COLUMN CLASS
 // 
+// @extends		.inline-list
 // @tag			ol, ul
 /////////////////////////////////////////
-
-.breadcrumbs {
+.breadcrumb {
 	margin: 0;
 	
 	li {
 		display: inline-block;
-		line-height: 24px;
-		font-size: 16px;
+		line-height: 18px;
+		font-size: 14px;
 		
 		&:after {
 			content: $breadcrumb-divider;

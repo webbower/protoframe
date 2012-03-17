@@ -24,14 +24,15 @@
 	
 	CSS UTILITIES:
 	✓ Breadcrumbs
-	- Clearfix
+	✓ Clearfix
 	- Visually Hidden
-	- Inline List
-	- Divider List (inline list with border dividers)
+	✓ Inline List
+	✓ Divider List (inline list with border dividers)
 	- Buttons (ui)
 	- Expand/Collapse
 	- Wireframe (creates outline)
-	- Mod/Media class (a la OOCSS)
+	- Module (Mod) object (a la OOCSS)
+	- Media class (a la OOCSS)
 	
 	MISC:
 	- Declarative Widget Events
