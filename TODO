@@ -66,3 +66,6 @@
 FAR FUTURE:
 - Drag and Drop
 - Persistent Changes
+- Floating Debug/State/Control Panel
+	- Displays current states and allows manual toggling of states
+	- Show faux-requests and form submissions
