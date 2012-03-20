@@ -1,0 +1,25 @@
+.pf-expandable {
+	.hd {
+		cursor: pointer;
+		
+		&:before {
+			content: '-\00A0';
+		}
+	}
+	
+	.bd {
+		
+	}
+	
+	&.pf-state-collapsed {
+		.hd {
+			&:before {
+				content: '+\00A0';
+			}
+		}
+		
+		.bd {
+			display: none;
+		}
+	}
+}

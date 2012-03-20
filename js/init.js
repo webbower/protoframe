@@ -11,5 +11,7 @@
 
 		// PF.Dialog.init();
 		
+		$('.expandable').expandable();
+		
 	});
 })(jQuery, this, this.document);

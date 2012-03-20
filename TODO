@@ -29,7 +29,7 @@
 	✓ Inline List
 	✓ Divider List (inline list with border dividers)
 	- Buttons (ui)
-	- Expand/Collapse
+	✓ Expand/Collapse
 	- Wireframe (creates outline)
 	✓ Module (Mod) object (a la OOCSS)
 	✓ Media class (a la OOCSS)
