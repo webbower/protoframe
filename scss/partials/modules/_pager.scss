@@ -1,0 +1,34 @@
+//////////////////////////////////////
+// PAGER MODULE
+//
+// @tag			ol,ul
+// @extends		.divided-list
+//////////////////////////////////////
+.pager {
+	margin: 0;
+	font-size: 14px;
+	
+	li {
+	}
+	
+	a {
+		text-decoration: none;
+		
+		&:hover,
+		&:focus {
+			text-decoration: underline;
+		}
+	}
+	
+	.current,
+	b {
+		font-weight: bold;
+		color: #333;
+		cursor: default;
+		text-decoration: none;
+	}
+	
+	span {
+		
+	}
+}
