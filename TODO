@@ -21,6 +21,7 @@
 	- Slideshow
 	- Media Grid
 	- Tag Cloud
+	- Pagination Controls (Static)
 	
 	CSS UTILITIES:
 	✓ Breadcrumbs
@@ -38,6 +39,7 @@
 	- Declarative Widget Events
 	- Baseline Typography, Form, Link, and Table styles
 	- Form Validation
+	- CSS Class extension validation JS
 
 2.0:
 	NAVIGATION:
@@ -50,7 +52,8 @@
 	WIDGETS:
 	- Tabs (rewritten)?
 	- Tableview (Editable)
-	- Sortable Table
+	- Sortable/Pageable Table
+	- Dynamic Pagination Controls
 	
 	CSS UTILITIES:
 	
